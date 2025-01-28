@@ -1,0 +1,36 @@
+// Vendor
+
+@import "vendor/normalize";
+
+// Swiper 11.0.7
+@import "vendor/swiper";
+
+// Global
+
+@import "global/variables";
+@import "global/fonts";
+@import "global/global";
+@import "global/utils";
+
+// Blocks
+
+@import "blocks/button";
+@import "blocks/title";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/video-block";
+@import "blocks/price";
+@import "blocks/games";
+@import "blocks/jury";
+@import "blocks/advantages";
+@import "blocks/offers";
+@import "blocks/faq";
+@import "blocks/reviews";
+@import "blocks/application";
+@import "blocks/form";
+@import "blocks/contact";
+@import "blocks/footer";
+@import "blocks/social";

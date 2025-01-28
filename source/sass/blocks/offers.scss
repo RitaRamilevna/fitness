@@ -1,0 +1,371 @@
+.offers {
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 45px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+  }
+}
+
+.offers__title {
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.offers__container {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    align-content: center;
+
+    row-gap: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 40px;
+
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
+}
+
+.offers__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+
+    justify-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 461px;
+  }
+}
+
+.offers__item-promo {
+  width: auto;
+  padding: 31px 45px 32px;
+
+  text-align: center;
+  color: $color-main-light;
+
+  background-color: $color-background-banners;
+
+  @media (min-width: $tablet-width) {
+    width: 278px;
+    padding: 40px 25px;
+
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    padding: 40px 45px;
+  }
+}
+
+.offers__item-image {
+  width: 100%;
+  min-height: 360px;
+  margin-bottom: 40px;
+  padding: 0;
+
+  background-image: url("../img/offers/offers-mobile@1.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  @media (min-resolution: $retina) {
+    background-image: url("../img/offers/offers-mobile@2.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+    margin-bottom: 0;
+
+    background-image: url("../img/offers/offers-tablet@1.jpg");
+
+    @media (min-resolution: $retina) {
+      background-image: url("../img/offers/offers-tablet@2.jpg");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 280px;
+
+      background-image: url("../img/offers/offers-desktop@1.jpg");
+
+      @media (min-resolution: $retina) {
+        background-image: url("../img/offers/offers-desktop@2.jpg");
+      }
+    }
+  }
+}
+
+.offers__item-content {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-height: 383px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 380px;
+  }
+}
+
+.offers__item-content h3 {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.offers__item-content span {
+  display: inline-block;
+  margin-bottom: 28px;
+
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+.offers__item-content p {
+  margin: 0;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.offers__button {
+  position: relative;
+
+  margin: 0 auto;
+  padding-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: start;
+  color: $color-main-light;
+  text-transform: uppercase;
+
+  outline: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    align-self: start;
+    margin: 0;
+    margin-top: auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    background-color: $color-main-light;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -17px;
+    bottom: -5px;
+    left: -10px;
+
+    border: 1px solid transparent;
+
+    transition: opacity 0.3s;
+
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:hover::after {
+    right: -6px;
+
+    opacity: 0.8;
+  }
+
+  &:focus::after,
+  &:focus-visible::after {
+    opacity: 0;
+  }
+
+  &:focus::before,
+  &:focus-visible::before {
+    border: 1px solid $color-main-light;
+  }
+
+  &:active::after {
+    right: -6px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:disabled::after {
+    opacity: 0.5;
+  }
+}
+
+.offers__button--dark {
+  color: $color-accent;
+
+  &::after {
+    background-color: $color-elements-accent;
+  }
+
+  &::before {
+    border: 1px solid transparent;
+  }
+
+  &:hover::after {
+    right: 0;
+  }
+
+  &:focus::before,
+  &:focus-visible::before {
+    right: -10px;
+
+    border: 1px solid $color-main-dark;
+  }
+
+  &:active::after {
+    right: 0;
+  }
+}
+
+.offers__list-sale {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+
+  gap: 31px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0;
+
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    margin-top: auto;
+  }
+}
+
+.offers__item-sale {
+  width: 100%;
+  padding: 21px 20px 23px;
+
+  text-align: center;
+  color: $color-accent;
+
+  border: 7px solid;
+  border-image: linear-gradient(to right bottom, #d10a42, #00359f);
+  border-image-slice: 1;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    max-width: 324px;
+    min-height: 188px;
+    padding: 21px 20px;
+
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 560px;
+    min-height: 174px;
+  }
+}
+
+.offers__item-sale h3 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 9px;
+
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+.offers__item-sale p {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 27px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,140 @@
+.footer {
+  color: $color-main-light;
+
+  background-color: $color-background-footer;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 40px 15px;
+
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    align-items: center;
+    padding: 45px;
+
+    gap: 20px;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 39px 103px 40px;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+  min-width: 100px;
+  height: 20px;
+
+  color: $color-main-light;
+
+  cursor: auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 110px;
+    height: 22px;
+    margin-bottom: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 130px;
+    height: 26px;
+    padding-top: 2px;
+  }
+}
+
+.footer__navigation {
+  @media (min-width: $tablet-width) {
+    justify-self: center;
+  }
+}
+
+.footer__navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+  column-gap: 35px;
+
+  row-gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 83px;
+  }
+}
+
+.footer__link {
+  position: relative;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -7px;
+    left: 0;
+
+    height: 1px;
+
+    background-color: transparent;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    bottom: -7px;
+    left: -10px;
+
+    border: 1px solid transparent;
+
+    transition: opacity 0.3s;
+
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    background-color: $color-main-light;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus::before,
+  &:focus-visible::before {
+    border: 1px solid $color-main-light;
+  }
+
+  &:active::after {
+    background-color: transparent;
+  }
+
+  &:active::before {
+    border: 1px solid transparent;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
